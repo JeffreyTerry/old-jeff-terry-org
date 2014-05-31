@@ -8,7 +8,6 @@ Requirements
 
 TODO
 --------
-* Configure grunt dev
 * Configure jshint
 * Add emailing engine
 * Add testing

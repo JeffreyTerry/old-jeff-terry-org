@@ -102,10 +102,13 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'assets/styles',
-          src: ['**/*.sass'],
+          src: ['**/*.sass', '**/*.css'],
           dest: 'public/styles',
           ext: '.css'
-        }]
+        }],
+        options: {
+          noCache: true,
+        }
       }
     },
     // Imagemin Config
@@ -130,12 +133,22 @@ module.exports = function (grunt) {
         }]
       }
     },
+    // Minifies css
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: 'public/styles/',
+        src: ['**/*.css'],
+        dest: 'public/styles/',
+        ext: '.css'
+      }
+    },
     // Copy 
     copy: {
       main: {
         expand: true,
         cwd: 'assets/',
-        src: ['js/**','imgs/**','styles/**/*.css'],
+        src: ['js/**','imgs/**'],
         dest: 'public/',
       },
       js: {
@@ -150,11 +163,11 @@ module.exports = function (grunt) {
         src: '**',
         dest: 'public/imgs',
       },
-      css: {
+      ico: {
         expand: true,
-        cwd: 'assets/styles/plain_css',
-        src: '*.css',
-        dest: 'public/styles'
+        cwd: 'assets/imgs/',
+        src: '**/*.ico',
+        dest: 'public/imgs'
       }
     },
     // Open Config
@@ -169,7 +182,7 @@ module.exports = function (grunt) {
     },
     // Cleans directories
     clean: {
-      src: ['public/imgs/','public/js/','public/styles/','.sass-cache']
+      src: ['public/imgs/','public/js/','public/styles/']
     },
     //Shell commands
     shell: {
@@ -205,5 +218,5 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['shell:mongo','develop', 'clean' ,'copy:main' ,'sass', 'open:delayed', 'watch']);
-  grunt.registerTask('build', ['uglify', 'sass', 'imagemin']);//Add more
+  grunt.registerTask('build', ['clean','uglify','sass','cssmin','svgmin','imagemin', 'copy:ico']);
 };
