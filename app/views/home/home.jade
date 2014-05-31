@@ -1,0 +1,19 @@
+extends ../layout
+
+block css
+  link(rel='stylesheet', href='/styles/home/home.css')
+
+block js
+  script(type='text/javascript', src='/js/home/home.js')
+
+
+block content
+  h1 home
+  form(id='login-form', action='\login', method="POST")
+    label(for='username') username
+      input(id='username',type='text',value='bob@example.com',placeholder='bob@example.com',name='email')
+    label(for='password') password
+      input(id='password',type='password',value='secret',placeholder='secret',name='password')
+    label(for='rememberme') Remember me
+    input(id='rememberme', type='checkbox', name='rememberme')
+    input(type='submit', id='submit-button',value='Sign Up',data-transition='fade', data-theme='c')
