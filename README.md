@@ -12,4 +12,4 @@ TODO
 * Configure jshint
 * Add emailing engine
 * Add testing
-* Add API authenication
+* Add API authentication
