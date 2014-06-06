@@ -1,6 +1,4 @@
-var express = require('express')
-  , passport = require('passport')
-  , session = require('../app/controllers/session');
+var express = require('express');
 
 // Configuration for express server
 module.exports = function(app, config) {
@@ -13,14 +11,8 @@ module.exports = function(app, config) {
     app.set('view engine', 'jade'); 
     app.use(express.favicon(config.root + '/public/imgs/favicon.ico'));
     app.use(express.logger('dev'));
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(express.cookieParser());
-    app.use(express.session({ secret: 'CHANGE THIS SECRET! USE NODE.EVN' })); 
-    //CSRF validation for non API routs and Oath validation for API calls
-    app.use(session.validateRequest);
-    app.use(passport.initialize());
-    app.use(passport.session());
+    app.use(express.urlencoded());
+    app.use(express.json());
     app.use(app.router);
     app.use(function(req, res) {
       res.status(404).render('404', { title: '404' });

@@ -5,12 +5,13 @@ var request = require('request');
 module.exports = function (grunt) {
   // show elapsed time at the end
   require('time-grunt')(grunt);
+
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   var reloadPort = 35729,
-    files;
+      files;
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -56,15 +57,6 @@ module.exports = function (grunt) {
           livereload: reloadPort
         }
       },
-      css: {
-        files: [
-          'assets/styles/plain_css/**'
-        ],
-        tasks: ['copy:css'],
-        options: {
-          livereload: reloadPort
-        }
-      },
       jade: {
         files: ['app/views/**/*.jade'],
         options: {
@@ -78,11 +70,10 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'Gruntfile.js',
+        'gruntfile.js',
         'app.js',
         'assets/js/**/*.js',
-        'app/**/*.js',
-   
+        'app/**/*.js'
       ]
     },
     // uglify javascript
@@ -102,7 +93,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'assets/styles',
-          src: ['**/*.sass', '**/*.css'],
+          src: ['**/*.sass'],
           dest: 'public/styles',
           ext: '.css'
         }],
@@ -148,7 +139,7 @@ module.exports = function (grunt) {
       main: {
         expand: true,
         cwd: 'assets/',
-        src: ['js/**','imgs/**'],
+        src: ['js/**', 'imgs/**', 'fonts/**'],
         dest: 'public/',
       },
       js: {
@@ -182,19 +173,19 @@ module.exports = function (grunt) {
     },
     // Cleans directories
     clean: {
-      src: ['public/imgs/','public/js/','public/styles/']
+      src: ['public/imgs/', 'public/js/', 'public/styles/']
     },
     //Shell commands
     shell: {
       //Running mongodb
       mongo: {
         command: 'mongod --diaglog 0 --profile 0 --quiet --dbpath db/&',
-          options: {
-              async: true,
-              stdout: false,
-              stderr: true
-          }
+        options: {
+            async: true,
+            stdout: false,
+            stderr: true
         }
+      }
     }
   });
 
@@ -217,6 +208,6 @@ module.exports = function (grunt) {
     }, 700);
   });
 
-  grunt.registerTask('default', ['shell:mongo','develop', 'clean' ,'copy:main' ,'sass', 'open:delayed', 'watch']);
-  grunt.registerTask('build', ['clean','uglify','sass','cssmin','svgmin','imagemin', 'copy:ico']);
+  grunt.registerTask('default', ['shell:mongo', 'develop', 'clean', 'copy:main', 'sass', 'open:delayed', 'watch']);
+  grunt.registerTask('build', ['clean', 'uglify', 'sass', 'cssmin', 'svgmin', 'imagemin', 'copy:ico']);
 };
