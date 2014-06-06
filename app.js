@@ -1,17 +1,15 @@
 var config = require('./config/config')
   , express = require('express')
   , mongoose = require('mongoose')
-  , socketIO = require('socket.io')
   , http = require('http')
-  , https = require('https')
   , fs = require('fs');
   
 
-// Mongodb connection 
+// Open the MongoDB connection 
 mongoose.connect(config.db);
 var db = mongoose.connection;
 db.on('error', function () {
-  throw new Error('unable to connect to database at ' + config.db);
+  throw new Error('Unable to connect to the database at ' + config.db);
 });
 
 
@@ -23,23 +21,12 @@ fs.readdirSync(modelsPath).forEach(function (file) {
   }
 });
 
-// Creating the app, https server and socket server. HTTPS only runs for production
-if (process.env.NODE_ENV == 'production') {
-  var app = express()
-    , server = https.createServer(config.cred, app)
-  	, io = socketIO.listen(server);
-} else {
-  var app = express()
-    , server = http.createServer(app)
-    , io = socketIO.listen(server);
-}
 
-
-// Configuring sockets, app and routes
-require('./config/socket')(io);
+// Configures app and routes
+var app = express();
 require('./config/express')(app, config);
-require('./config/routes')(app, io);
+require('./config/routes')(app);
 
-
-server.listen(config.port);
+// Starts the server
+http.createServer(app).listen(config.port);
 console.log('Express server is listening on port %s on %s environment.', config.port, app.settings.env);

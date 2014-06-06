@@ -8,25 +8,25 @@ var config = {
   development: {
     root: rootPath,
     app: {
-      name: 'AppName'
+      name: 'Jeffnet'
     },
     port: 3000,
-    db: 'mongodb://localhost/AppName-development'
+    db: 'mongodb://localhost/Jeffnet-development'
   },
 
   test: {
     root: rootPath,
     app: {
-      name: 'AppName'
+      name: 'Jeffnet'
     },
     port: 3000,
-    db: 'mongodb://localhost/AppName-test'
+    db: 'mongodb://localhost/Jeffnet-test'
   },
 
   production: {
     root: rootPath,
     app: {
-      name: 'AppName'
+      name: 'Jeffnet'
     },
     port: 3000,
     cred: {
@@ -37,7 +37,7 @@ var config = {
         ca: fs.readFileSync('/ssl/ca/ca.crt')
         */
     },
-    db: 'mongodb://localhost/AppName-production'
+    db: 'mongodb://localhost/Jeffnet-production'
   }
 };
 
