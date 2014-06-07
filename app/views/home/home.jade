@@ -3,17 +3,43 @@ extends ../layout
 block css
   link(rel='stylesheet', href='/styles/home/home.css')
 
-block js
-  script(type='text/javascript', src='/js/home/home.js')
 
 
 block content
-  h1 home
-  form(id='login-form', action='\login', method="POST")
-    label(for='username') username
-      input(id='username',type='text',value='bob@example.com',placeholder='bob@example.com',name='email')
-    label(for='password') password
-      input(id='password',type='password',value='secret',placeholder='secret',name='password')
-    label(for='rememberme') Remember me
-    input(id='rememberme', type='checkbox', name='rememberme')
-    input(type='submit', id='submit-button',value='Sign Up',data-transition='fade', data-theme='c')
+  .top-wrapper
+    .top(data-stellar-background-ratio='0.5')
+  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.5') To the crazy ones&nbsp
+    i.fa.fa-glass
+
+  .navigation-panel.cursor-default.unselectable.animated.bounceInRight
+    ul
+      li(onclick='navigateTo(0)')
+        span About
+      li(onclick='navigateTo(1)')
+        span Studies
+      li(onclick='navigateTo(2)')
+        span Projects
+      li(onclick='navigateTo(3)')
+        span Code
+      li(onclick='navigateTo(4)')
+        span Books
+  .pa-container
+    div.middle-section(id='about')
+      .title Me
+      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+    div.middle-section(id='studies')
+      .title Studies
+      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+    div.middle-section(id='projects')
+      .title Projects
+      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+    div.middle-section(id='code')
+      .title Code
+      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+    div.middle-section(id='books')
+      .title Books
+      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+
+
+block js
+  script(type='text/javascript', src='/js/home/home.js')

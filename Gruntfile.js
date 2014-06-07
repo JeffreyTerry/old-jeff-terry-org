@@ -24,6 +24,10 @@ module.exports = function (grunt) {
       options: {
         nospawn: true,
       },
+      fonts: {
+        files: ['assets/fonts/**', 'assets/styles/fonts.css'],
+        tasks: ['copy:fonts', 'copy:css']
+      },
       sass: {
         files: ['assets/styles/**/*.sass'],
         tasks: ['sass'],
@@ -131,7 +135,7 @@ module.exports = function (grunt) {
         cwd: 'public/styles/',
         src: ['**/*.css'],
         dest: 'public/styles/',
-        ext: '.css'
+        ext: '.min.css'
       }
     },
     // Copy 
@@ -139,7 +143,7 @@ module.exports = function (grunt) {
       main: {
         expand: true,
         cwd: 'assets/',
-        src: ['js/**', 'imgs/**', 'fonts/**'],
+        src: ['js/**', 'imgs/**', 'fonts/**', 'styles/fonts.css'],
         dest: 'public/',
       },
       js: {
@@ -147,6 +151,12 @@ module.exports = function (grunt) {
         cwd: 'assets/js',
         src: '**',
         dest: 'public/js',
+      },
+      css: {
+        expand: true,
+        cwd: 'assets/styles/',
+        src: 'fonts.css',
+        dest: 'public/styles/'
       },
       imgs: {
         expand: true,
@@ -159,6 +169,12 @@ module.exports = function (grunt) {
         cwd: 'assets/imgs/',
         src: '**/*.ico',
         dest: 'public/imgs'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'assets/fonts/',
+        src: '**',
+        dest: 'public/fonts/'
       }
     },
     // Open Config
