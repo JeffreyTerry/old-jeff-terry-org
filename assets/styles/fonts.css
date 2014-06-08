@@ -9,13 +9,23 @@
 }
 
 @font-face {
+  font-family: opensans;
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
   font-family: alphaecho;
   src: url('../fonts/Alpha-Echo/alpha_echo.ttf');
 }
 
 @font-face {
-  font-family: amble-light;
-  src: url('../fonts/amble/Amble-Light.ttf');
+  font-family: myriad;
+  src: url('../fonts/myriad-pro/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face {
+  font-family: myriad-light;
+  src: url('../fonts/myriad-pro/MyriadPro-Light.otf');
 }
 
 @font-face {
@@ -46,6 +56,26 @@
 @font-face {
   font-family: envycoder;
   src: url('../fonts/Envy Code R PR7/Envy Code R.ttf');
+}
+
+@font-face {
+  font-family: envycoder-bold;
+  src: url('../fonts/Envy Code R PR7/Envy Code R Bold.ttf');
+}
+
+@font-face {
+  font-family: sourcecodepro;
+  src: url('../fonts/source-code-pro/SourceCodePro-Regular.otf');
+}
+
+@font-face {
+  font-family: sourcecodepro-light;
+  src: url('../fonts/source-code-pro/SourceCodePro-Light.otf');
+}
+
+@font-face {
+  font-family: heuristica;
+  src: url('../fonts/heuristica/Heuristica-Regular.otf');
 }
 
 

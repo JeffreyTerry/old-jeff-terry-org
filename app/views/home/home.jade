@@ -8,38 +8,130 @@ block css
 block content
   .top-wrapper
     .top(data-stellar-background-ratio='0.5')
-  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.5') To the crazy ones&nbsp
+  //- .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') Jeff Terry
+  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') To the crazy ones&nbsp
     i.fa.fa-glass
 
   .navigation-panel.cursor-default.unselectable.animated.bounceInRight
     ul
       li(onclick='navigateTo(0)')
         span About
-      li(onclick='navigateTo(1)')
-        span Studies
       li(onclick='navigateTo(2)')
         span Projects
       li(onclick='navigateTo(3)')
         span Code
+      li(onclick='navigateTo(1)')
+        span Studies
       li(onclick='navigateTo(4)')
         span Books
   .pa-container
-    div.middle-section(id='about')
-      .title Me
-      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
-    div.middle-section(id='studies')
-      .title Studies
-      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
-    div.middle-section(id='projects')
-      .title Projects
-      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
-    div.middle-section(id='code')
-      .title Code
-      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
-    div.middle-section(id='books')
-      .title Books
-      .content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
-
+    .content-wrapper
+      div.middle-section(id='about')
+        .title Jeff Terry
+        .subtitle Coder. Entrepreneur. Lifelong Learner.
+        .text-content.
+          Hi, my name's Jeff, and I just used global warming to break the ice! Who am I?
+          Well, the short version of who I am and what I do are those three things
+          up there in the subtitle. The long version is too long to write here.
+        .photo-timeline
+          img(src='../../imgs/aboutme/1.jpg')
+          img(src='../../imgs/aboutme/2.jpg')
+          img(src='../../imgs/aboutme/3.jpg')
+          img(src='../../imgs/aboutme/4.jpg')
+          img(src='../../imgs/aboutme/5.jpg')
+      .section-divider
+      div.middle-section(id='projects')
+        .title projects
+        .text-content.
+          I love reading books. But at a certain point, all of that knowledge is worthless unless it is used for action.
+          Through projects I work on, I try to apply the things I
+          learn in books and in the classroom to make the world a better place and to improve the lives
+          of those around me.
+        .projects-wrapper
+          .educode
+            .project-description-wrapper
+              .project-title Educode
+          .the-seed
+            .project-description-wrapper
+              .project-title The Seed
+          .park-ave
+            .project-description-wrapper
+              .project-title Park Ave
+          .nsgocg
+            .project-description-wrapper
+              .project-title NSGOCG
+      .section-divider
+      div.middle-section(id='code')
+        .title code
+        .subtitle { all day }
+        .text-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+      .section-divider
+      div.middle-section(id='studies')
+        .title studies
+        .text-content.
+          I believe it's important for computer scientists to understand many different patterns
+          of thinking, as we design products for a wide range of people. In order to better understand these
+          patterns of thinking, I make a point of taking classes outside of computer science. In my academic career, I've
+          studied a large variety of topics, ranging from US economic policy to industrial/organizational
+          psychology and even poetry. Below is a small sample of topics I have researched and studied.
+        .studies-box.computer-science
+          .icon
+            i.fa.fa-sitemap
+          .studies-content-wrapper
+            .studies-box-title Computer Science
+            .studies
+              .study-item
+                span Java - C Plus Plus - Javascript - Lisp
+              .study-item
+                span Full Stack Web Development
+              .study-item
+                span Intelligent Robotics
+              .study-item
+                span Algorithm Design
+        .studies-box.math
+          .icon
+            i.fa.fa-cubes
+          .studies-content-wrapper
+            .studies-box-title Mathematics
+            .studies
+              .study-item
+                span Calculus
+              .study-item
+                span Ordinary Differential Equations
+              .study-item
+                span Linear Algebra
+              .study-item
+                span Discrete Mathematics
+        .studies-box.physics
+          .icon
+            i.fa.fa-magnet.fa-rotate-90
+          .studies-content-wrapper
+            .studies-box-title Physics
+            .studies
+              .study-item
+                span Classical Mechanics
+              .study-item
+                span Electromagnetism
+        .studies-box.psychology
+          .icon
+            i.fa.fa-user
+          .studies-content-wrapper
+            .studies-box-title Psychology
+            .studies
+              .study-item
+                span General Psychology
+              .study-item
+                span Industrial/Organizational
+              .study-item
+                span Group Psychology
+      .section-divider
+      div.middle-section(id='books')
+        .title recommended books
+        .book-box-wrapper
+          .book-box#zen-and-the-art
+          .book-box#outliers
+          .book-box#nisi
+    .blank-content
 
 block js
   script(type='text/javascript', src='/js/home/home.js')

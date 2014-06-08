@@ -19,6 +19,13 @@ $primary-text-color: #000
   -ms-border-bottom-left-radius:     $radius
   border-bottom-left-radius:         $radius
 
+=unselectable()
+  -webkit-user-select: none    
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+
 @import global/footer
 
 body
@@ -34,11 +41,7 @@ body
   cursor: default
 
 .unselectable
-  -webkit-user-select: none    
-  -moz-user-select: none
-  -ms-user-select: none
-  -o-user-select: none
-  user-select: none
+  +unselectable()
 
 
 
