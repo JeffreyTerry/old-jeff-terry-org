@@ -1,5 +1,24 @@
 @import ../global
 
+// general layout
+$content-padding: 60px
+$blank-content-width: 180px
+
+// studies box stuff
+$computer-science-studies-box-height: 260px
+$math-studies-box-height: 260px
+$physics-studies-box-height: 180px
+$psychology-studies-box-height: 200px
+$studies-icon-width: 240px
+
+// project box stuff
+$project-box-height: 320px
+$project-box-padding: 20px
+
+// book box stuff
+$book-box-padding: 20px
+$books-per-line: 3
+
 .top-wrapper
   width: 100%
 
@@ -10,12 +29,15 @@
   height: 581px
 
 .top-text
-  font-size: 60px
+  // font-size: 110px
+  font-size: 68px
   color: white
   position: absolute
   top: 220px
   left: 60px
-  font-family: opensans-light
+  // top: 180px
+  // left: 12%
+  font-family: myriad
 
 .navigation-panel
   position: fixed
@@ -42,19 +64,189 @@
         font-family: avantgarde
         color: white
 
+
+.studies-box
+  width: $container-width - $blank-content-width
+  margin-top: 20px
+  .icon
+    float: left
+    width: $studies-icon-width
+    i
+      line-height: normal
+      vertical-align: middle
+      width: $studies-icon-width
+      text-align: center
+      font-size: 120px
+  .studies-content-wrapper
+    float: right
+    width: $container-width - $blank-content-width - $studies-icon-width
+    overflow-y: hidden
+    .studies-box-title
+      cursor: default
+      +unselectable()
+      font-size: 50px
+      font-family: sourcecodepro
+    .studies
+      .study-item
+        font-size: 24px
+        font-family: alphaecho
+        padding: 5px
+        cursor: default
+        +unselectable()
+        // &:hover
+          // background-color: rgba(98, 74, 46, 0.6)
+
 .middle-section
-  min-height: 500px
   .title
-    font-size: 60px
-    width: 260px
+    cursor: default
+    +unselectable()
+    font-size: 80px
     text-align: left
     font-family: comfortaa-light
-    margin-left: 40px
+    // &:first
+    margin-top: 28px
+  .subtitle
+    cursor: default
+    +unselectable()
+    font-size: 36px
+    text-align: left
+    font-family: opensans-light
+    color: gray
+  .text-content
+    font-size: 16px
+    font-family: opensans
+  .photo-timeline
     margin-top: 40px
+    img
+      display: inline-block
+      width: ($container-width - $blank-content-width - 50px) / 5
+      margin-right: 10px
+      height: 110px
+  .computer-science
+    @extend .studies-box
+    height: $computer-science-studies-box-height
+    .icon
+      line-height: $computer-science-studies-box-height
+      height: $computer-science-studies-box-height
+    .studies-content-wrapper
+      height: $computer-science-studies-box-height
+  .math
+    @extend .studies-box
+    height: $math-studies-box-height
+    .icon
+      line-height: $math-studies-box-height
+      height: $math-studies-box-height
+    .studies-content-wrapper
+      height: $math-studies-box-height
+  .physics
+    @extend .studies-box
+    height: $physics-studies-box-height
+    .icon
+      line-height: $physics-studies-box-height
+      height: $physics-studies-box-height
+    .studies-content-wrapper
+      height: $physics-studies-box-height
+  .psychology
+    @extend .studies-box
+    height: $psychology-studies-box-height
+    .icon
+      line-height: $psychology-studies-box-height
+      height: $psychology-studies-box-height
+    .studies-content-wrapper
+      height: $psychology-studies-box-height
 
 
+.middle-section#about
+  .text-content
+    margin-top: 28px
 
+.middle-section#studies
+  .text-content
+    margin-top: 10px
 
+.project-box
+  +border-radius(2px)
+  cursor: pointer
+  height: $project-box-height
+  width: ($container-width - $blank-content-width - $project-box-padding * 4) / 2
+  margin: $project-box-padding $project-box-padding
+  position: relative
+  border-bottom: 3px solid white
+  &:hover
+    border-bottom: 3px solid blue
+  .project-description-wrapper
+    background-color: white
+    width: ($container-width - $blank-content-width - $project-box-padding * 4) / 2
+    position: absolute
+    bottom: 0
+    .project-title
+      color: gray
+      text-align: center
+      font-size: 40px
+      font-family: sourcecodepro
+
+.middle-section#projects
+  .text-content
+    margin-top: 28px
+  .projects-wrapper
+    margin-top: 20px
+    .educode
+      @extend .project-box
+      float: left
+    .the-seed
+      @extend .project-box
+      float: right
+    .park-ave
+      @extend .project-box
+      background-image: url('../../imgs/projects/parkave.png')
+      background-size: 100%
+      float: left
+      margin-bottom: 30px
+    .nsgocg
+      @extend .project-box
+      background-image: url('../../imgs/projects/nsgocg.png')
+      background-size: 100%
+      float: right
+      margin-bottom: 60px
+
+.middle-section#code
+  .text-content
+    margin-top: 28px
+
+.book-box
+  height: 300px
+  width: ($container-width - $blank-content-width - $book-box-padding * ($books-per-line * 2)) / $books-per-line - 1px
+  margin: $book-box-padding
+  float: left
+  background-size: 100%
+  +border-radius(2px)
+
+.book-box#outliers
+  background-image: url('../../imgs/books/outliers.jpg')
+
+.book-box#zen-and-the-art
+  background-image: url('../../imgs/books/zen.jpg')
+
+.book-box#nisi
+  background-image: url('../../imgs/books/nisi.jpg')
+
+.middle-section#books
+  .text-content
+    margin-top: 10px
+
+.content-wrapper
+  float: left
+  width: $container-width - $blank-content-width
+  margin-bottom: 50px
+
+.blank-content
+  float: right
+  width: $blank-content-width
+
+.section-divider
+  border-bottom: 1px solid gray
+  margin-top: 60px
+  clear: both
 
 
 
