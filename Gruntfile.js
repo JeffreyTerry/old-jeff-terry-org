@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     develop: {
       server: {
-        file: 'app.js'
+        file: 'index.js'
       }
     },
     watch: {
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: [
-          'app.js',
+          'index.js',
           'app/**/*.js',
           'config/*.js'
         ],
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
       },
       all: [
         'gruntfile.js',
-        'app.js',
+        'index.js',
         'assets/js/**/*.js',
         'app/**/*.js'
       ]
