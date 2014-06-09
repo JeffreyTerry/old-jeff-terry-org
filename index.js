@@ -27,6 +27,11 @@ var app = express();
 require('./config/express')(app, config);
 require('./config/routes')(app);
 
-// Starts the server
-http.createServer(app).listen(config.port);
-console.log('Express server is listening on port %s on %s environment.', config.port, app.settings.env);
+
+// Starts the server: Export the app when running production, start the server directly when developing.
+if (process.env.NODE_ENV == 'production') {
+  module.exports = app;
+} else {
+  http.createServer(app).listen(config.port);
+  console.log('Express server is listening on port %s on %s environment.', config.port, app.settings.env);
+}
