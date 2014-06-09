@@ -27,12 +27,26 @@ block content
   .pa-container
     .content-wrapper
       div.middle-section(id='about')
-        .title Jeff Terry
+        .title Jeff Terry&nbsp
+          .i.linkedin-link.fa.fa-linkedin-square(onclick='goto("http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/")')
         .subtitle Coder. Entrepreneur. Lifelong Learner.
-        .text-content.
-          Hi, my name's Jeff, and I just used global warming to break the ice! Who am I?
-          Well, the short version of who I am and what I do are those three things
-          up there in the subtitle. The long version is too long to write here.
+        .text-content
+          | Hi, my name's Jeff, and I just used global warming to break the ice!
+          br
+          br
+          | Right now, my major interests include entrepreneurship,
+          | full stack web development, intelligent robotics, and computer science education.
+          | The big projects I'm working on in these
+          | areas include a company I'm co-founding called&nbsp
+          a(href='http://getparkave.com/') Park Ave
+          | , an intelligent automation system for my apartment, and a computer science education program
+          | in Norman Public Schools called&nbsp
+          a(href='http://www.educode.org/') Educode
+          | .
+          br
+          br
+          | When I'm not busy working on projects or doing classwork, I enjoy reading, listening to music, and of course
+          | taking long walks on the beach.
         .photo-timeline
           img(src='../../imgs/aboutme/1.jpg')
           img(src='../../imgs/aboutme/2.jpg')
@@ -43,28 +57,28 @@ block content
       div.middle-section(id='projects')
         .title projects
         .text-content.
-          I love reading books. But at a certain point, all of that knowledge is worthless unless it is used for action.
+          I love reading books. But at a certain point, all of that knowledge is worthless until it is used for action.
           Through projects I work on, I try to apply the things I
           learn in books and in the classroom to make the world a better place and to improve the lives
           of those around me.
         .projects-wrapper
-          .educode
+          .educode(onclick='goto("http://www.educode.org/")')
             .project-description-wrapper
               .project-title Educode
-          .the-seed
+          .the-seed(onclick='goto("http://google.com/")')
             .project-description-wrapper
               .project-title The Seed
-          .park-ave
+          .park-ave(onclick='goto("http://getparkave.com/")')
             .project-description-wrapper
               .project-title Park Ave
-          .nsgocg
+          .nsgocg(onclick='goto("http://github.com/JeffreyTerry")')
             .project-description-wrapper
               .project-title NSGOCG
       .section-divider
       div.middle-section(id='code')
-        .title code
-        .subtitle { all day }
-        .text-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra mi ut sem eleifend dictum. Nunc malesuada ligula nibh, id volutpat ipsum sollicitudin eu. Suspendisse posuere nunc at volutpat mollis. Sed porttitor quis libero non varius. Ut ultricies est sed sapien tristique, id volutpat leo sollicitudin. Sed nec erat consectetur, molestie orci sit amet, condimentum eros. Aliquam malesuada mauris nibh, vel varius lorem tristique vitae. Suspendisse et risus sed velit feugiat dictum. Cras elementum ullamcorper diam id ullamcorper. Curabitur ut ultricies nisi.
+        .title code&nbsp
+          .i(title='Github', onclick='goto("http://github.com/JeffreyTerry")').github-link.fa.fa-github
+        .subtitle Java - C++ - Javascript - Lisp
       .section-divider
       div.middle-section(id='studies')
         .title studies
