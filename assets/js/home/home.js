@@ -7,3 +7,19 @@ function navigateTo(sectionNumber){
 function goto(url){
   window.location = url;
 }
+
+$(document).ready(function(){
+    if($(window).width() >= 1020){
+        $.stellar({
+          horizontalScrolling: false
+        });
+        $('.navigation-panel').addClass('animated');
+        $('.navigation-panel').addClass('bounceInRight');
+    }else{
+        $('.navigation-panel').addClass('animated');
+        $('.navigation-panel').addClass('fadeInDown');
+    }
+});
+
+
+

@@ -22,6 +22,13 @@ $books-per-line: 3
 .top-wrapper
   width: 100%
 
+
+@media (max-width: $container-width)
+  .top-wrapper
+    width: $container-width
+  .top
+    width: $container-width
+
 .top
   background: url("../../imgs/home.jpg") 50% 0px no-repeat fixed
   text-align: center
@@ -29,6 +36,7 @@ $books-per-line: 3
   height: 581px
 
 .top-text
+  width: 600px
   // font-size: 110px
   font-size: 68px
   color: white
@@ -40,6 +48,7 @@ $books-per-line: 3
   font-family: myriad
 
 .navigation-panel
+  z-index: 2
   position: fixed
   top: 125px
   right: 0px
@@ -64,6 +73,35 @@ $books-per-line: 3
         font-family: avantgarde
         color: white
 
+@media (max-width: $container-width)
+  .navigation-panel
+    top: 0
+    left: 0
+    right: 0
+    height: 60px
+    width: 100%
+    ul
+      +border-radius(0)
+      background-color: rgba(98, 74, 46, 0.95)
+      li
+        height: 60px !important
+        line-height: 60px
+        +border-radius(0)
+        padding: 0
+        display: inline-block
+        text-align: center
+        span
+          text-align: center
+          padding-left: 24px
+          padding-right: 24px
+
+@media (max-width: 460px)
+  .navigation-panel
+    ul
+      li
+        span
+          padding-left: 6px
+          padding-right: 6px
 
 .studies-box
   width: $container-width - $blank-content-width
