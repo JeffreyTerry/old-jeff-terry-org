@@ -28,6 +28,10 @@ module.exports = function (grunt) {
         files: ['assets/fonts/**', 'assets/styles/fonts.css'],
         tasks: ['copy:fonts', 'copy:css']
       },
+      external_libs: {
+        files: ['assets/styles/external_libs/**', 'assets/js/external_libs/**'],
+        tasks: ['copy:external_js', 'copy:external_css']
+      },
       sass: {
         files: ['assets/styles/**/*.sass'],
         tasks: ['sass'],
@@ -143,7 +147,7 @@ module.exports = function (grunt) {
       main: {
         expand: true,
         cwd: 'assets/',
-        src: ['js/**', 'imgs/**', 'fonts/**', 'styles/fonts.css'],
+        src: ['js/**', 'imgs/**', 'fonts/**', 'styles/fonts.css', 'styles/external_libs/**'],
         dest: 'public/',
       },
       js: {
@@ -175,6 +179,18 @@ module.exports = function (grunt) {
         cwd: 'assets/fonts/',
         src: '**',
         dest: 'public/fonts/'
+      },
+      external_js: {
+        expand: true,
+        cwd: 'assets/js',
+        src: 'external_libs/**',
+        dest: 'public/js/external_libs'
+      },
+      external_css: {
+        expand: true,
+        cwd: 'assets/css',
+        src: 'external_libs/**',
+        dest: 'public/css/external_libs'
       }
     },
     // Open Config

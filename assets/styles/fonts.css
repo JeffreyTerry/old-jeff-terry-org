@@ -78,7 +78,10 @@
   src: url('../fonts/heuristica/Heuristica-Regular.otf');
 }
 
-
+@font-face {
+  font-family: indieflower;
+  src: url('../fonts/indie_flower/indieFlower.ttf');
+}
 
 
 

@@ -34,7 +34,13 @@ $(document).ready(function(){
 
   $(window).resize(function(){
     reformatElements();
-  })
+  });
+
+  $('.img-clickable').glisse({
+    changeSpeed: 300,
+    effect: 'fadeBig',
+    fullscreen: false
+  });
 });
 
 
