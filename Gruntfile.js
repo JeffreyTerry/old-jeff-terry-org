@@ -188,9 +188,9 @@ module.exports = function (grunt) {
       },
       external_css: {
         expand: true,
-        cwd: 'assets/css',
+        cwd: 'assets/styles',
         src: 'external_libs/**',
-        dest: 'public/css/external_libs'
+        dest: 'public/style/external_libs'
       }
     },
     // Open Config
