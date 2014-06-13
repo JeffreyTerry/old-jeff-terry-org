@@ -4,6 +4,10 @@
 $content-padding: 60px
 $blank-content-width: 180px
 
+// about me box stuff
+$carousel-control-button-width: 50px
+$photo-timeline-padding: 6px
+
 // studies box stuff
 $computer-science-studies-box-height: 260px
 $math-studies-box-height: 260px
@@ -36,16 +40,20 @@ $books-per-line: 3
   height: 581px
 
 .top-text
-  width: 600px
+  width: 700px
   // font-size: 110px
-  font-size: 68px
+  font-size: 48px
   color: white
   position: absolute
   top: 220px
   left: 60px
   // top: 180px
   // left: 12%
-  font-family: myriad
+  font-family: indieflower
+
+@media (max-width: $container-width)
+  .top-text
+    font-size: 40px
 
 .navigation-panel
   z-index: 2
@@ -129,11 +137,26 @@ $books-per-line: 3
     font-family: opensans
   .photo-timeline
     margin-top: 40px
-    img
-      display: inline-block
-      width: ($container-width - $blank-content-width - 50px) / 5
-      margin-right: 10px
-      height: 110px
+    #photo-carousel
+      .carousel-inner
+        .item
+          margin-left: $carousel-control-button-width
+          img
+            display: inline-block
+            width: ($container-width - $blank-content-width - $carousel-control-button-width * 2 - $photo-timeline-padding * 8) / 4
+            margin-right: $photo-timeline-padding
+            margin-left: $photo-timeline-padding
+            height: 110px
+      .carousel-control
+        width: $carousel-control-button-width
+        background: none
+        span
+          right: 10px !important
+          left: 10px
+          margin-left: 0
+          margin-right: 0
+          text-shadow: none
+          color: gray
   .computer-science
     @extend .studies-box
     height: $computer-science-studies-box-height
@@ -182,6 +205,9 @@ $books-per-line: 3
   .text-content
     margin-top: 10px
 
+.img-hover
+  -webkit-filter: brightness(0.75)
+
 .project-box
   +border-radius(2px)
   cursor: pointer
@@ -191,6 +217,7 @@ $books-per-line: 3
   position: relative
   border-bottom: 3px solid white
   &:hover
+    @extend .img-hover
     border-bottom: 3px solid blue
   .project-description-wrapper
     background-color: white
@@ -247,27 +274,14 @@ $books-per-line: 3
   background-size: 100% 100%
   +border-radius(2px)
 
-.book-box#outliers
-  background-image: url('../../imgs/books/outliers.jpg')
-
-.book-box#zen-and-the-art
-  background-image: url('../../imgs/books/zen.jpg')
-
-.book-box#nisi
-  background-image: url('../../imgs/books/nisi.jpg')
-
-.book-box#powerofhabit
-  background-image: url('../../imgs/books/powerofhabit.jpg')
-
-.book-box#steallikeanartist
-  background-image: url('../../imgs/books/steallikeanartist.jpg')
-
-.book-box#algorithms
-  background-image: url('../../imgs/books/algorithms.jpg')
-
 .middle-section#books
   .text-content
     margin-top: 10px
+
+.img-clickable
+  cursor: pointer
+  &:hover
+    @extend .img-hover
 
 .content-wrapper
   float: left

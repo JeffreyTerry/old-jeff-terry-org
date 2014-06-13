@@ -9,8 +9,7 @@ block content
   .top-wrapper
     .top(data-stellar-background-ratio='0.5')
   //- .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') Jeff Terry
-  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') To the crazy ones&nbsp
-    i.fa.fa-glass
+  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') To the crazy ones
 
   .navigation-panel.cursor-default.unselectable.animated.bounceInRight
     ul
@@ -45,14 +44,38 @@ block content
           | .
           br
           br
-          | When I'm not busy working on projects or doing classwork, I enjoy reading, listening to music, and of course
+          | When I'm not busy working on projects or doing classwork, I enjoy reading, playing
+          | basketball, riding my bike, listening to music, running
+          | far, and of course
           | taking long walks on the beach.
         .photo-timeline
-          img(src='../../imgs/aboutme/1.jpg')
-          img(src='../../imgs/aboutme/2.jpg')
-          img(src='../../imgs/aboutme/3.jpg')
-          img(src='../../imgs/aboutme/4.jpg')
-          img(src='../../imgs/aboutme/5.jpg')
+          #photo-carousel.carousel.slide(data-ride='carousel', data-interval='false')
+            //- ol.carousel-indicators
+            //-   li.active(data-target='#photo-carousel', data-slide-to='0')
+            //-   li(data-target='#photo-carousel', data-slide-to='1')
+            //-   li(data-target='#photo-carousel', data-slide-to='2')
+            //-   li(data-target='#photo-carousel', data-slide-to='3')
+            //-   li(data-target='#photo-carousel', data-slide-to='4')
+            .carousel-inner
+              .item.active
+                img.img-clickable(src='../../imgs/aboutme/1_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/1.jpg', rel='photo-timeline', title='Presenting Park Ave at the CCEW Final Presentations')
+                img.img-clickable(src='../../imgs/aboutme/2_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/2.jpg', rel='photo-timeline')
+                img.img-clickable(src='../../imgs/aboutme/3_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/3.jpg', rel='photo-timeline')
+                img.img-clickable(src='../../imgs/aboutme/4_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/4.jpg', rel='photo-timeline')
+              .item
+                img.img-clickable(src='../../imgs/aboutme/5_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/5.jpg', rel='photo-timeline')
+                img.img-clickable(src='../../imgs/aboutme/6_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/6.jpg', rel='photo-timeline')
+                img.img-clickable(src='../../imgs/aboutme/7_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/7.jpg', rel='photo-timeline')
+                img.img-clickable(src='../../imgs/aboutme/8_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/8.jpg', rel='photo-timeline')
+              .item
+                img.img-clickable(src='../../imgs/aboutme/9_thumbnail.jpg', data-glisse-big='../../imgs/aboutme/9.jpg', rel='photo-timeline')
+
+            a.left.carousel-control(href='#photo-carousel', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left
+            a.right.carousel-control(href='#photo-carousel', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right
+
+
       .section-divider
       div.middle-section(id='projects')
         .title projects
@@ -142,12 +165,12 @@ block content
       div.middle-section(id='books')
         .title recommended books
         .book-box-wrapper
-          .book-box#zen-and-the-art
-          .book-box#outliers
-          .book-box#steallikeanartist
-          .book-box#algorithms
-          .book-box#powerofhabit
-          .book-box#nisi
+          img.book-box.img-clickable(src='../../imgs/books/zen.jpg', data-glisse-big='../../imgs/books/zen.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/outliers.jpg', data-glisse-big='../../imgs/books/outliers.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/steallikeanartist.jpg', data-glisse-big='../../imgs/books/steallikeanartist.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/algorithms.jpg', data-glisse-big='../../imgs/books/algorithms.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/powerofhabit.jpg', data-glisse-big='../../imgs/books/powerofhabit.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/nisi.jpg', data-glisse-big='../../imgs/books/nisi.jpg', rel='books')
     .blank-content
 
 block js
