@@ -9,7 +9,6 @@ block content
   .top-wrapper
     .top(data-stellar-background-ratio='0.5')
   //- .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') Jeff Terry
-  .top-text.cursor-default.unselectable.animated.fadeIn(data-stellar-ratio='0.6') To the crazy ones
 
   .navigation-panel.cursor-default.unselectable.animated.bounceInRight
     ul
@@ -20,32 +19,33 @@ block content
       li(onclick='navigateTo(3)')
         span Code
       li(onclick='navigateTo(1)')
-        span Studies
+        span Education
       li(onclick='navigateTo(4)')
         span Books
   .pa-container
     .content-wrapper
       div.middle-section(id='about')
-        .title Jeff Terry&nbsp
+        .title Jeffrey Terry&nbsp
           .i.linkedin-link.fa.fa-linkedin-square(onclick='goto("http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/")')
         .subtitle Coder. Entrepreneur. Lifelong Learner.
         .text-content
           | Hi, my name's Jeff, and I just used global warming to break the ice!
           br
           br
-          | Right now, my major interests include entrepreneurship,
-          | full stack web development, intelligent robotics, and computer science education.
-          | The big projects I'm working on in these
-          | areas include a company I'm co-founding called&nbsp
-          a(href='http://getparkave.com/') Park Ave
-          | , an intelligent automation system for my apartment, and a computer science education program
+          | Right now, my interests include entrepreneurship,
+          | intelligent robotics, and computer science education.
+          | The big projects I'm working on include a company I'm co-founding called&nbsp
+          a(href='http://projectxip.com/') XiP Technologies
+          | , an 
+          a(href='/wakeme') intelligent automation system
+          | &nbspfor my apartment, and a computer science education program
           | in Norman Public Schools called&nbsp
           a(href='http://www.educode.org/') Educode
           | .
           br
           br
           | When I'm not busy working on projects or doing classwork, I enjoy reading, playing
-          | basketball, riding my bike, listening to music, running far, and of course
+          | basketball, riding my bike, listening to music, running far, and, of course,
           | taking long walks on the beach.
         .photo-timeline
           #photo-carousel.carousel.slide(data-ride='carousel', data-interval='false')
@@ -78,38 +78,27 @@ block content
       .section-divider
       div.middle-section(id='projects')
         .title projects
-        .text-content.
-          I love reading books. But at a certain point, all of that knowledge is worthless until it's put into practice, right?
-          Through projects I work on, I apply the things I
-          learn in books and in the classroom to make the world a better place and improve the lives
-          of those around me.
         .projects-wrapper
+          .xip(onclick='goto("http://projectxip.com/")')
+            .project-description-wrapper
+              .project-title XiP Technologies
           .educode(onclick='goto("http://www.educode.org/")')
             .project-description-wrapper
               .project-title Educode
-          .the-seed(onclick='alert("Coming soon!")')
-            .project-description-wrapper
-              .project-title The Seed
-          .park-ave(onclick='goto("http://projectxip.com/")')
-            .project-description-wrapper
-              .project-title XiP Technologies
           .nsgocg(onclick='goto("http://nsgocg.org/")')
             .project-description-wrapper
               .project-title NSGOCG
+          .the-seed(onclick='alert("Coming Spring 2014!")')
+            .project-description-wrapper
+              .project-title The Seed
       .section-divider
       div.middle-section(id='code')
         .title code&nbsp
           .i(title='Github', onclick='goto("http://github.com/JeffreyTerry")').github-link.fa.fa-github
-        .subtitle Java - Python - C++ - Javascript - Lisp
+        .subtitle Python - Java - C++ - Javascript - Lisp
       .section-divider
       div.middle-section(id='studies')
-        .title studies
-        .text-content.
-          I believe it's important for computer scientists to understand many different patterns
-          of thinking, as we design products for a wide range of people. In order to better understand these
-          patterns of thinking, I make a point of taking classes outside of computer science. In my academic career, I've
-          studied a large variety of topics, ranging from US economic policy to industrial/organizational
-          psychology and even poetry. Below is a small sample of topics I have researched and studied.
+        .title education
         .studies-box.computer-science
           .icon
             i.fa.fa-sitemap
@@ -117,7 +106,7 @@ block content
             .studies-box-title Computer Science
             .studies
               .study-item
-                span Java - Python - C Plus Plus - Javascript - Lisp
+                span Python - Java - C Plus Plus - Javascript - Lisp
               .study-item
                 span Full Stack Web Development
               .study-item
@@ -131,9 +120,7 @@ block content
             .studies-box-title Mathematics
             .studies
               .study-item
-                span Calculus
-              .study-item
-                span Ordinary Differential Equations
+                span Calculus / ODEs
               .study-item
                 span Linear Algebra
               .study-item
@@ -162,13 +149,13 @@ block content
       div.middle-section(id='books')
         .title recommended books
         .book-box-wrapper
-          img.book-box.img-clickable(src='../../imgs/books/zen.jpg', data-glisse-big='../../imgs/books/zen.jpg', rel='books')
-          img.book-box.img-clickable(src='../../imgs/books/outliers.jpg', data-glisse-big='../../imgs/books/outliers.jpg', rel='books')
-          img.book-box.img-clickable(src='../../imgs/books/steallikeanartist.jpg', data-glisse-big='../../imgs/books/steallikeanartist.jpg', rel='books')
-          img.book-box.img-clickable(src='../../imgs/books/powerofhabit.jpg', data-glisse-big='../../imgs/books/powerofhabit.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/fourhours.jpg', data-glisse-big='../../imgs/books/fourhours.jpg', rel='books')
           img.book-box.img-clickable(src='../../imgs/books/nisi.jpg', data-glisse-big='../../imgs/books/nisi.jpg', rel='books')
-          img.book-box.img-clickable(src='../../imgs/books/secretsofnegotiation.jpg', data-glisse-big='../../imgs/books/secretsofnegotiation.jpg', rel='books')
           img.book-box.img-clickable(src='../../imgs/books/littlebets.jpg', data-glisse-big='../../imgs/books/littlebets.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/powerofhabit.jpg', data-glisse-big='../../imgs/books/powerofhabit.jpg', rel='books')
+          //- img.book-box.img-clickable(src='../../imgs/books/secretsofnegotiation.jpg', data-glisse-big='../../imgs/books/secretsofnegotiation.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/zen.jpg', data-glisse-big='../../imgs/books/zen.jpg', rel='books')
+          img.book-box.img-clickable(src='../../imgs/books/steallikeanartist.jpg', data-glisse-big='../../imgs/books/steallikeanartist.jpg', rel='books')
     .blank-content
 
 block js

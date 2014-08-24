@@ -1,4 +1,5 @@
 $footer-height: 160px
+$footer-image-width: 160px
 
 .footer-box
   clear: both
@@ -12,12 +13,14 @@ $footer-height: 160px
 
 .footer-image
   float: left
+  width: $footer-image-width
 
 .footer-text-wrapper
-  float: left
+  float: right
   padding-top: 50px
   height: $footer-height - 50px
   line-height: $footer-height - 50px
+  width: $container-width - $footer-image-width - 20px
   .footer-text
     font-family: disco
     font-size: 20px
