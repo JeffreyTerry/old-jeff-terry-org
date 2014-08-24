@@ -194,10 +194,26 @@ $books-per-line: 3
 .middle-section#about
   .title
     .linkedin-link
+      display: inline-block
       color: rgb(2, 116, 179)
       cursor: pointer
       &:hover
         color: #40BBFF
+    .resume-link
+      +border-radius(4px)
+      +unselectable()
+      font-size: 28px
+      font-family: opensans
+      vertical-align: middle
+      margin-left: 20px
+      padding-left: 10px
+      padding-right: 10px
+      cursor: pointer
+      color: white
+      background-color: #F2AA00
+      text-decoration: none
+      &:hover
+        background-color: #FFBA17
   .text-content
     margin-top: 28px
 

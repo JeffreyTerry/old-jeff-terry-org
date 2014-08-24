@@ -18,4 +18,9 @@ module.exports = function(app){
   _.each(URLToFileMap, function(value, key){
     app.get(key, renderStaticPage);
   });
+
+  app.get('/resume', function(req, res){
+    console.log('this');
+    res.sendfile('public/imgs/resume.pdf');
+  });
 };
