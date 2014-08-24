@@ -12,7 +12,7 @@ var renderStaticPage = function(req, res){
   });
 };
 
-module.exports = function(app){
+module.exports = function(app, config){
 /* Client Routes */
   // All static pages
   _.each(URLToFileMap, function(value, key){
@@ -21,6 +21,7 @@ module.exports = function(app){
 
   app.get('/resume', function(req, res){
     console.log('this');
-    res.sendfile('imgs/resume.pdf', {root: './public'});
+    console.log(config.root);
+    res.sendfile(config.root + '/public/imgs/resume.pdf');
   });
 };
