@@ -162,6 +162,12 @@ module.exports = function (grunt) {
         src: 'fonts.css',
         dest: 'public/styles/'
       },
+      pdfs: {
+        expand: true,
+        cwd: 'assets/imgs',
+        src: '*.pdf',
+        dest: 'public/imgs',
+      },
       imgs: {
         expand: true,
         cwd: 'assets/imgs',
@@ -241,5 +247,5 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['shell:mongo', 'develop', 'clean', 'copy:main', 'sass', 'open:delayed', 'watch']);
-  grunt.registerTask('build', ['clean', 'uglify', 'sass', 'cssmin', 'svgmin', 'imagemin', 'copy:ico', 'copy:css', 'copy:fonts', 'copy:external_css', 'copy:external_js']);
+  grunt.registerTask('build', ['clean', 'uglify', 'sass', 'cssmin', 'svgmin', 'imagemin', 'copy:pdfs', 'copy:ico', 'copy:css', 'copy:fonts', 'copy:external_css', 'copy:external_js']);
 };

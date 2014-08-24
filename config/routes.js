@@ -21,6 +21,6 @@ module.exports = function(app){
 
   app.get('/resume', function(req, res){
     console.log('this');
-    res.sendfile('public/imgs/resume.pdf');
+    res.sendfile('./public/imgs/resume.pdf');
   });
 };
