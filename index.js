@@ -25,7 +25,7 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 // Configures app and routes
 var app = express();
 require('./config/express')(app, config);
-require('./config/routes')(app);
+require('./config/routes')(app, config);
 
 
 // Starts the server: Export the app when running production, start the server directly when developing.
