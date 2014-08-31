@@ -2,7 +2,8 @@ var _ = require('underscore');
 
 // Stores a dictionary with route paths as keys and their corresponding static html files as values.
 var URLToFileMap = {
-  '/': 'home/home'
+  '/': 'home/home',
+  '/fun': 'fun/fun'
 };
 
 // Renders the proper web page for all static pages by parsing the route from the req object.
