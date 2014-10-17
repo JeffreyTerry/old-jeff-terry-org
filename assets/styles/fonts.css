@@ -55,12 +55,12 @@
 
 @font-face {
   font-family: envycoder;
-  src: url('../fonts/Envy Code R PR7/Envy Code R.ttf');
+  src: url('../fonts/source-code-pro/SourceCodePro-Regular.otf');
 }
 
 @font-face {
   font-family: envycoder-bold;
-  src: url('../fonts/Envy Code R PR7/Envy Code R Bold.ttf');
+  src: url('../fonts/source-code-pro/SourceCodePro-Regular.otf');
 }
 
 @font-face {
