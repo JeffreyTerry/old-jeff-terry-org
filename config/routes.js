@@ -21,8 +21,8 @@ module.exports = function(app, config){
   });
 
   app.get('/resume', function(req, res){
-    console.log('this');
-    console.log(config.root);
     res.sendfile(config.root + '/public/imgs/resume.pdf');
   });
 };
+
+
