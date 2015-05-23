@@ -23,6 +23,10 @@ module.exports = function(app, config){
   app.get('/resume', function(req, res){
     res.sendfile(config.root + '/public/imgs/resume.pdf');
   });
+
+  app.get('/transcript', function(req, res){
+    res.sendfile(config.root + '/public/imgs/transcript.pdf');
+  });
 };
 
 
