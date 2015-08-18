@@ -15,19 +15,17 @@ block content
             img.img-responsive.img-circle.jeff-image(src='imgs/jeff.jpg', alt='Me at La tour Eiffel', title='Me at La tour Eiffel')
         .row
           .col-xs-12
-            h1.title Jeffrey&nbsp;Terry
-      .col-sm-6.main-description-text.
-        Hi, my name's Jeff, and I just used global warming to break the ice! Right now, my interests include entrepreneurship, intelligent robotics, and computer science education. The big projects I'm working on include a company I'm co-founding called XiP Technologies, an intelligent automation system for my apartment, and a computer science education program at a middle school in Norman. When I'm not working on projects or doing classwork, I enjoy reading, playing basketball, and, of course, taking long walks on the beach.
+            h1.title Jeff&nbsp;Terry
+      .col-sm-6.main-description-text
+        | Hello visitor, and welcome to my website. Within these starch-white pages you will find an assortment of information about me. But before I allow you to dive in, I would like to introduce myself. My name is Jeff. I currently study Math, Computer Science, and
+        | 
+        a(data-toggle='popover', data-trigger='hover', data-placement='left auto', data-content='I like to take courses in all academic areas. My hope is that by doing so I can improve my communication skills, understand more fully the perspectives of others, and in general, become a better person.').other-disciplines-link a lot of other stuff
+        | 
+        | at the University of Oklahoma. In addition to my academic studies, I actively work on projects that I believe will better the lives of myself and my fellow students. After graduating, I plan to keep rocking the college lifestyle until I fully understand the human experience; that is to say, I plan to keep learning forever.
     .row
-      .col-sm-10.col-sm-offset-1.bar
-    .row.triangles
-      .col-sm-10.col-sm-offset-1
-        .left-square
-        .left-triangle
-        .right-triangle
-        .right-square
+      .col-md-10.col-md-offset-1.bar.first
     .row
-      .col-sm-10.col-sm-offset-1.link-box
+      .col-md-10.col-md-offset-1.link-box
         .row
           .col-md-4.col-sm-4.resume-link
             a.resume-link(href='/resume')
@@ -41,14 +39,8 @@ block content
             a.linkedin-link(href='http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/')
               .i.fa.fa-linkedin-square
               |&nbsp;LinkedIn
-          //- .col-md-4.col-md-offset-2.col-sm-5.col-sm-offset-1.resume-link
-          //-   a.resume-link(href='/resume')
-          //-     .i.fa.fa-file(onclick='goto("http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/")')
-          //-     |&nbsp;Resume
-          //- .col-md-4.col-sm-5.linkedin-link
-          //-   a.linkedin-link(href='http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/')
-          //-     .i.fa.fa-linkedin-square
-          //-     |&nbsp;LinkedIn
+    .row
+      .col-md-10.col-md-offset-1.project-box
 
 
 block js

@@ -1,8 +1,8 @@
-var config = require('./config/config')
-  , express = require('express')
-  , mongoose = require('mongoose')
-  , http = require('http')
-  , fs = require('fs');
+var config = require('./config/config'),
+    express = require('express'),
+    mongoose = require('mongoose'),
+    http = require('http'),
+    fs = require('fs');
   
 
 // Open the MongoDB connection 
@@ -25,7 +25,6 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 // Configures app and routes
 var app = express();
 require('./config/express')(app, config);
-require('./config/routes')(app, config);
 
 
 // Starts the server: Export the app when running production, start the server directly when developing.
