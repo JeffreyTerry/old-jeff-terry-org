@@ -9,7 +9,7 @@ var URLToFileMap = {
 // Renders the proper web page for all static pages by parsing the route from the req object.
 var renderStaticPage = function(req, res){
   res.render(URLToFileMap[req.route.path], {
-      title: 'Jeffrey Terry'
+      title: 'Jeff Terry'
   });
 };
 
