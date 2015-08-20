@@ -17,30 +17,53 @@ block content
           .col-xs-12
             h1.title Jeff&nbsp;Terry
       .col-sm-6.main-description-text
-        | Hello visitor, and welcome to my website. Within these starch-white pages you will find an assortment of information about me. But before I allow you to dive in, I would like to introduce myself. My name is Jeff. I currently study Math, Computer Science, and
+        | Hello visitor, and welcome to my website. Within this starch-white page you will find an assortment of information about me. But before I allow you to dive in, I would like to introduce myself. My name is Jeff. I currently study Math, Computer Science, and
         | 
-        a(data-toggle='popover', data-trigger='hover', data-placement='left auto', data-content='I like to take courses in all academic areas. My hope is that by doing so I can improve my communication skills, understand more fully the perspectives of others, and in general, become a better person.').other-disciplines-link a lot of other stuff
+        a.other-disciplines-link(data-toggle='popover', data-trigger='hover', data-placement='left', data-content='I like to take courses in all academic areas. My hope is that by doing so I can improve my communication skills, understand more fully the perspectives of others, and in general, become a better person.') a lot of other stuff
         | 
         | at the University of Oklahoma. In addition to my academic studies, I actively work on projects that I believe will better the lives of myself and my fellow students. After graduating, I plan to keep rocking the college lifestyle until I fully understand the human experience; that is to say, I plan to keep learning forever.
     .row
-      .col-md-10.col-md-offset-1.bar.first
-    .row
-      .col-md-10.col-md-offset-1.link-box
+      .col-md-10.col-md-offset-1.links-box
         .row
           .col-md-4.col-sm-4.resume-link
             a.resume-link(href='/resume')
               .i.fa.fa-file
-              |&nbsp;Resume
+                span &nbsp;Resume
           .col-md-4.col-sm-4.blog-link
             a.blog-link(href='http://blog.jeffterry.org/')
               .i.fa.fa-pencil
-              |&nbsp;Blog
+                span &nbsp;Blog
           .col-md-4.col-sm-4.linkedin-link
             a.linkedin-link(href='http://www.linkedin.com/pub/jeffrey-terry/22/31b/253/')
               .i.fa.fa-linkedin-square
-              |&nbsp;LinkedIn
-    .row
-      .col-md-10.col-md-offset-1.project-box
+                span &nbsp;LinkedIn
+  .row-fluid.projects-row
+    video(width='100%', poster='/videos/Austin Timelapse Placeholder 480p.jpg', autoplay, loop)
+      source(src='/videos/Austin Timelapse 480p.mp4')
+      | Your browser doesn't support HTML5 videos. Frowny face.
+    .col-md-10.col-md-offset-1.projects-box
+      .row
+        .col-xs-12
+          .projects-header Live Projects
+      .row
+        .col-xs-3
+          a.circle(href='https://github.com/JeffreyTerry/busme') BusMe
+        .col-xs-3
+          a.circle(href='https://github.com/JeffreyTerry/college-auditorium-film-finder') Dank&nbsp;Swank
+        .col-xs-3
+          a.circle(href='http://ccew-vault.tk/') The Vault
+        .col-xs-3
+          a.circle(href='https://github.com/JeffreyTerry/speedyo') SpeedYo
+  .row-fluid.extras-row
+    .col-md-10.col-md-offset-1.extras-box
+      .extras-header
+        span Past Work
+        br
+        a(href='http://vocalorchard.jeffterry.org/', data-toggle='popover', data-trigger='hover', data-placement='right auto', data-content='') http://vocalorchard.jeffterry.org/
+        br
+        a(href='http://nsgocg.org/', data-toggle='popover', data-trigger='hover', data-placement='right auto', data-content='') http://nsgocg.org/
+        br
+        a(href='http://github.com/JeffreyTerry/farkle/', data-toggle='popover', data-trigger='hover', data-placement='right auto', data-content='') http://github.com/JeffreyTerry/farkle/
 
 
 block js
