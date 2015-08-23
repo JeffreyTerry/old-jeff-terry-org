@@ -31,7 +31,6 @@ $(function () {
     // Dimensions of the projects box
     var width = $(window).width();
     var height = width * 0.562;
-    console.log(width, height);
 
     // The styled minimum width of the video is 400px,
     // but for some reason it mins-out at 480px
