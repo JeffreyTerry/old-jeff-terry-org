@@ -15,12 +15,12 @@ $(function() {
             var letterToEncode = value.substr(value.length - 1);
             encoderValue += letterToEncode;
             if (encodingMap[letterToEncode])
-                if (encodedValue.length !== 0)
+                if (encodedValue.length % 4 !== 0)
                     encodedValue += ',';
                 encodedValue += encodingMap[letterToEncode];
         } else {
             encoderValue = encoderValue.substring(0, value.length);
-            encodedValue = encodedValue.substring(0, value.length * 4);
+            encodedValue = encodedValue.substring(0, value.length * 4 - 1);
         }
         $('#encoded-text').html(encodedValue);
     });
