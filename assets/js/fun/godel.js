@@ -35,7 +35,7 @@ $(function() {
             decoderValue += numberToEncode;
             if (reverseEncodingMap[numberToEncode])
                 decodedValue += reverseEncodingMap[numberToEncode];
-        } else if (value.length > decoderValue.length + 3 || value.length === decoderValue.length - 3) {  // This case will happen if somebody pastes into the textarea
+        } else if (value.length > decoderValue.length + 3 || (value.length < decoderValue.length && value.length % 3 == 0)) {  // This case will happen if somebody pastes into the textarea
             decoderValue = value;
             decodedValue = '';
             for (var i = 0; i < decoderValue.length; i += 3) {
