@@ -1,0 +1,27 @@
+extends ../layout
+
+block css
+  link(rel='stylesheet', href='/styles/fun/godel.css')
+
+block content
+  .main-header.container
+    .row
+      .col-xs-12
+        h1.header Gödel-numberer
+        textarea.form-control#encoder(rows='6', placeholder='Type here to Gödel-number your kōans', autofocus='true')
+    .row
+      .col-xs-12
+        div#encoded-text
+    .row
+      .col-xs-12
+        div.hr
+    .row
+      .col-xs-12
+        h1.header Dangerous extraction tool
+        textarea.form-control#decoder(rows='6', placeholder='Please keep in mind the Central Dogma of Zen strings')
+    .row
+      .col-xs-12
+        div#decoded-text
+
+block js
+  script(type='text/javascript', src='/js/fun/godel.js')
