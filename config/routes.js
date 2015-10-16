@@ -3,7 +3,8 @@ var _ = require('underscore');
 // Stores a dictionary with route paths as keys and their corresponding static html files as values.
 var URLToFileMap = {
   '/': 'home/home',
-  '/fun': 'fun/fun'
+  '/fun': 'fun/fun',
+  '/godel': 'fun/godel'
 };
 
 // Renders the proper web page for all static pages by parsing the route from the req object.
@@ -28,5 +29,4 @@ module.exports = function(app, config){
     res.sendfile(config.root + '/public/imgs/transcript.pdf');
   });
 };
-
 
