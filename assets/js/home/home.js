@@ -39,4 +39,10 @@ $(function () {
     // Set some style variables
     $('.projects-box').css('top', '-' + height + 'px');
   }
+
+  $('.main-description-text').readmore({
+    collapsedHeight: 320,
+    moreLink: '<a class="col-sm-6">Read more</a>',
+    lessLink: '<a class="col-sm-6 col-sm-offset-5">Read less</a>'
+  });
 });

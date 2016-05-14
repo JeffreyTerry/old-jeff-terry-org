@@ -13,5 +13,8 @@
     "jquery.stellar": "~0.6.2",
     "animate-css": "~3.1.1",
     "jquery-color": "~2.1.2"
+  },
+  "resolutions": {
+    "jquery": ">=2.1.4"
   }
 }
